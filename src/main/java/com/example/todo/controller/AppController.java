@@ -54,7 +54,7 @@ public class AppController {
     }
 
     @GetMapping("/tasks/{userId}")
-    public ResponseEntity<List<FetchTaskResponse>> getTasks(@PathVariable(name = "userId") String userId){
+    public ResponseEntity<List<FetchTaskResponse>> getTasks(@PathVariable(name = "userId") int userId){
         return ResponseEntity.ok(null);
     }
 }
