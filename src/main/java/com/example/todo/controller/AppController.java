@@ -45,16 +45,16 @@ public class AppController {
 
     @PostMapping("/task")
     public ResponseEntity<CreateTaskResponse> createTask(@RequestBody CreateTaskRequest createTaskRequest){
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(appService.createTask(createTaskRequest));
     }
 
     @PutMapping("/task")
     public ResponseEntity<UpdateTaskResponse> updateTask(@RequestBody UpdateTaskRequest updateTaskRequest){
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(appService.updateTask(updateTaskRequest));
     }
 
     @GetMapping("/tasks/{userId}")
     public ResponseEntity<List<FetchTaskResponse>> getTasks(@PathVariable(name = "userId") int userId){
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(appService.getTasks(userId));
     }
 }

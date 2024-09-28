@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UpdateTaskRequest {
     private int taskId;
-    private boolean isDone;
+    private Boolean isDone;
 }
