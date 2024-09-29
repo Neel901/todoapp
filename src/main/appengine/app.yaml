@@ -1,5 +1,5 @@
 runtime: java17
-entrypoint: java -Xmx64m -jar build/libs/todo-0.0.1-SNAPSHOT-plain.jar
+entrypoint: java -Xmx64m -jar todo-0.0.1-SNAPSHOT-plain.jar
 env_variables:
   SPRING_PROFILES_ACTIVE: "gcp,mysql"
 handlers:
