@@ -31,6 +31,11 @@ public class AppController {
     @Autowired
     private AppService appService;
 
+    @GetMapping("/")
+    public ResponseEntity<String> healthCheck(){
+        return ResponseEntity.ok("Service is up!");
+    }
+
     @PostMapping("/signup")
     public ResponseEntity<SignupResponse> signup(@RequestBody SignupRequest signupRequest){
         return ResponseEntity.ok(appService.signup(signupRequest));
